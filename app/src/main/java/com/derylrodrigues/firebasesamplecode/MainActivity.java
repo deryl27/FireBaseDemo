@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    private static final String FIREBASE_DB = "https://madscienceapp.firebaseIO.com/";
+    private static final String FIREBASE_DB = "https://<Your FireBase App>.firebaseIO.com/";
 
     private EditText key;
     private EditText value;
@@ -78,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot snapshot) {
                 // snapshot contains the key and value
                 Toast.makeText(MainActivity.this, "Key - " + snapshot.getKey() + " - Value - " + snapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
+
+                // do something with the key and value
+                // TODO:
             }
 
             @Override
