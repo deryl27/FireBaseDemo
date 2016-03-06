@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    private static final String FIREBASE_DB = "https://blazing-fire-1360.firebaseIO.com/";
     final Handler handler = new Handler();
 
     private EditText key;
@@ -45,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         remoteClient = new RemoteClient(this);
-
-
-
-
 
         key = (EditText) findViewById(R.id.Key);
         value = (EditText) findViewById(R.id.Value);
@@ -80,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
         //initialize the TimerTask's job
         initializeTimerTask(key);
         //schedule the timer, after the first 5000ms the TimerTask will run every 10000ms
-
         // The values can be adjusted depending on the performance
         timer.schedule(timerTask, 5000, 1000);
     }
@@ -153,4 +147,5 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //    }
+
 }

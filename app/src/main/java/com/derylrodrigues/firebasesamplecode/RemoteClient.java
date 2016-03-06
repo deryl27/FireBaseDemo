@@ -22,7 +22,7 @@ import java.util.HashMap;
 public class RemoteClient {
 
     private static final String MyPREFERENCES = "MyPrefs" ;
-    private static final String FIREBASE_DB = "https://blazing-fire-1360.firebaseIO.com/";
+    private static final String FIREBASE_DB = "https://<Your FireBase AppName>.firebaseIO.com/";
     private static final String TAG = "RemoteClient";
     private static boolean isDataChanged = false;
     private Context mContext;
@@ -77,7 +77,6 @@ public class RemoteClient {
                     Log.d(TAG, "Data Received" + snapshot.getValue().toString());
 
                     // Adding the data to the HashMap
-
                     fireBaseData.put(snapshot.getKey(), snapshot.getValue().toString());
 
                 }
@@ -97,5 +96,4 @@ public class RemoteClient {
             }
         });
     }
-
 }
